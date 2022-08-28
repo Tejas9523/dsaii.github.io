@@ -4,68 +4,22 @@
   <title>DSAII</title>
   <link rel="stylesheet" href="style.css">
   <script>
-    document.addEventListener('DOMContentLoaded', function (event) {
-      // array with texts to type in typewriter
-      var dataText = ["Data Science and Artificial Intelligence Inquisitive Club ..."];
 
-      // type one text in the typwriter
-      // keeps calling itself until the text is finished
-      function typeWriter(text, i, fnCallback) {
-        // chekc if text isn't finished yet
-        if (i < (text.length)) {
-          // add next character to h1
-          document.querySelector("h1").innerHTML = text.substring(0, i + 1) + '<span aria-hidden="true"></span>';
-
-          // wait for a while and call this function again for next character
-          setTimeout(function () {
-            typeWriter(text, i + 1, fnCallback)
-          }, 100);
-        }
-        // text finished, call callback if there is a callback function
-        else if (typeof fnCallback == 'function') {
-          // call callback after timeout
-          setTimeout(fnCallback, 200);
-        }
-      }
-      // start a typewriter animation for a text in the dataText array
-      function StartTextAnimation(i) {
-        if (typeof dataText[i] == 'undefined') {
-          setTimeout(function () {
-            StartTextAnimation(0);
-          }, 20000);
-        }
-        // check if dataText[i] exists
-        if (i < dataText[i].length) {
-          // text exists! start typewriter animation
-          typeWriter(dataText[i], 0, function () {
-            // after callback (and whole text has been animated), start next text
-            StartTextAnimation(i + 1);
-          });
-        }
-      }
-      // start the text animation
-      StartTextAnimation(0);
-    });
 
   </script>
   <nav>
-
-    <img src="home.png" height="20px" width="20px">
     <a href="index.html">Home</a>
-    <img src="about.png" height="25px" width="25px">
     <a href="about.html">About</a>
-    <img src="team.png" height="20px" width="20px">
     <a href="team.html">Team</a>
   </nav>
 </head>
 
 <body class="banner">
   <div class="content">
-    <img src="logo.JPG" height="120px" width="320">
+    <img style="margin-left:150px;" src="logo.JPG" height="120px" width="320">
     <img src="pic.gif" height="120px" width="100">
-    <h1
-      style="color: white; padding-top: 50px; margin-bottom: 250px;text-shadow: 2px 2px 4px #f83d3d;font-family: 'Times New Roman', Times, serif;">
-      DSAII CLUB </h1>
+    <h1 class="animate">
+      Data Science And Artificial Intelligence Inquisitive Club... </h1>
     <h3 class="dsaii"><i>DSAII</i></h3>is a club founded by a group of first-year students<br><br>
     Who want to make engineering more intersting for every student in <i><b>DY Patil Institute of
         Technology.</b></i><br><br>
@@ -76,11 +30,10 @@
     Learn more<i> About us</i><br><br>
     Meet our <i>Team</i>
     <div class="foot">
-      <a href="https://www.linkedin.com/company/dsaii-club/"><img " src="in.png" height="40px"
-          width="40px"></a>
-      <a href=""><img  src="tweet.png" height="40px" width="40px"></a>
-      <a href=""><img  src="face.jpg" height="40px" width="40px"></a>
-      <a href=""><img  src="insta.png" height="40px" width="40px"></a>
+      <a href="https://www.linkedin.com/company/dsaii-club/"><img " src=" in.png" height="40px" width="40px"></a>
+      <a href=""><img src="tweet.png" height="40px" width="40px"></a>
+      <a href=""><img src="face.jpg" height="40px" width="40px"></a>
+      <a href=""><img src="insta.png" height="40px" width="40px"></a>
     </div>
   </div>
 
